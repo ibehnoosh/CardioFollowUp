@@ -14,7 +14,11 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
         <!-- Styles -->
+        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+        <script src="https://cdn.tailwindcss.com/?plugins=forms"></script>
         @livewireStyles
+
+
     </head>
     <body class="font-sans antialiased">
         <x-jet-banner />

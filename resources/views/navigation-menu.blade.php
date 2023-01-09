@@ -96,7 +96,7 @@
                                 {{ __('Report of Information') }}
                             </div>
 
-                            <x-jet-dropdown-link href="{{ route('dashboard') }}">
+                            <x-jet-dropdown-link href="{{ route('provinceList') }}">
                                 {{ __('Based On City') }}
                             </x-jet-dropdown-link>
                             <x-jet-dropdown-link href="{{ route('dashboard') }}">
