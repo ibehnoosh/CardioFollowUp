@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Livewire\Provinces;
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Livewire\Provinces;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,15 +15,13 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 Route::middleware([
     'auth:sanctum', config('jetstream.auth_session'), 'verified'])->group(function () {
+        Route::get('/', function () {return view('dashboard');});
         Route::get('/dashboard', function () {return view('dashboard');})->name('dashboard');
-        Route::get('/user', [UserController::class, 'index'])->name('userList');
-        Route::get('/user/create', [UserController::class, 'create'])->name('userCreate');
         Route::get('/provinces', Provinces::class)->name('provinceList');
+        Route::get('/users', Provinces::class)->name('userList');
 
 });

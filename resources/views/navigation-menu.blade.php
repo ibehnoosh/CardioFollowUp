@@ -42,7 +42,7 @@
                             <x-jet-dropdown-link href="{{ route('userList') }}">
                                 {{ __('List of Users') }}
                             </x-jet-dropdown-link>
-                            <x-jet-dropdown-link href="{{ route('userCreate') }}">
+                            <x-jet-dropdown-link href="{{ route('userList') }}">
                                 {{ __('Create New User') }}
                             </x-jet-dropdown-link>
                         </x-slot>
@@ -136,7 +136,7 @@
                             <x-jet-dropdown-link href="{{ route('dashboard') }}">
                                 {{ __('Users') }}
                             </x-jet-dropdown-link>
-                            <x-jet-dropdown-link href="{{ route('dashboard') }}">
+                            <x-jet-dropdown-link href="{{ route('provinceList') }}">
                                 {{ __('Provinces') }}
                             </x-jet-dropdown-link>
                         </x-slot>

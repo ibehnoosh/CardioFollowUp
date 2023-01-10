@@ -3,10 +3,12 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
+use App\Http\Livewire;
 use App\Models\Province;
 
-class Provinces extends Component
+class Provinces extends Component implements LivewireInterface
 {
+    use LivewireTrait;
     public $provinces;
     public  $name;
     public  $province_id;
@@ -17,21 +19,7 @@ class Provinces extends Component
         $this->provinces= Province::all()->sortBy(['name']);
         return view('livewire.provinces');
     }
-
-    public function create()
-    {
-        $this->resetInputFields();
-        $this->openModal();
-    }
-    public function openModal()
-    {
-        $this->isOpen= true;
-    }
-    public function closeModal()
-    {
-        $this->isOpen= false;
-    }
-    private function resetInputFields()
+    public function resetInputFields()
     {
         $this->name ='';
         $this->province_id='';
