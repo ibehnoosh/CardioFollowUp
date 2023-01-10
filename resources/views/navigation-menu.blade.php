@@ -130,10 +130,10 @@
                                 {{ __('Basic Information') }}
                             </div>
 
-                            <x-jet-dropdown-link href="{{ route('dashboard') }}">
+                            <x-jet-dropdown-link href="{{ route('hospitalList') }}">
                                 {{ __('Hospitals') }}
                             </x-jet-dropdown-link>
-                            <x-jet-dropdown-link href="{{ route('dashboard') }}">
+                            <x-jet-dropdown-link href="{{ route('userList') }}">
                                 {{ __('Users') }}
                             </x-jet-dropdown-link>
                             <x-jet-dropdown-link href="{{ route('provinceList') }}">

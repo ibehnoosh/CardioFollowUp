@@ -29,10 +29,10 @@ class Provinces extends Component implements LivewireInterface
         $this->validate([
             'name'=>'required'
         ]);
-        Province::updateOrCreate([
-            'id'=>$this->province_id,
-            'name'=> $this->name,
-        ]);
+        Province::updateOrCreate(
+            ['id'=>$this->province_id ],
+            ['name'=> $this->name]
+        );
         session()->flash('message',
         $this->province_id ? 'Province Update Successfully' : 'Province Created Successfully');
 

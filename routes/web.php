@@ -1,9 +1,9 @@
 <?php
 
-
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Livewire\Provinces;
+use App\Http\Livewire\Hospitals;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,6 +22,7 @@ Route::middleware([
         Route::get('/', function () {return view('dashboard');});
         Route::get('/dashboard', function () {return view('dashboard');})->name('dashboard');
         Route::get('/provinces', Provinces::class)->name('provinceList');
-        Route::get('/users', Provinces::class)->name('userList');
+        Route::get('/hospitals', Hospitals::class)->name('hospitalList');
+        Route::get('/users', [UserController::class,'index'])->name('userList');
 
 });

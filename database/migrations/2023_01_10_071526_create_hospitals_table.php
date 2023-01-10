@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('hospitals', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->foreignId('province_id')->constrained();
             $table->timestamps();
         });
     }
