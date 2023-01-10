@@ -24,5 +24,6 @@ Route::middleware([
         Route::get('/provinces', Provinces::class)->name('provinceList');
         Route::get('/hospitals', Hospitals::class)->name('hospitalList');
         Route::get('/users', [UserController::class,'index'])->name('userList');
+        Route::get('/users/create', [UserController::class,'create'])->name('userCreate');
 
 });
