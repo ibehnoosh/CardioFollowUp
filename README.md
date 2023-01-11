@@ -7,10 +7,11 @@ This follow up change during time.
 This system help doctors to save patient info and check their health condition.
 Ofcource, This project that is published here just a sample and the comertial version is private!
 
-## Features: 
+## Features that Complete Until now: 
 
 - User team (support, doctors)
-- Manage patients information
 - User Jetstream as Authentication system
+- Manage Province Info
+- Mange Hospital Info
 - ...
-- ...
+- 
